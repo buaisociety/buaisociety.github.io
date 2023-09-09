@@ -1,0 +1,102 @@
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+nav ul {
+    padding: 0;
+    list-style-type: none;
+    overflow: hidden;
+}
+
+nav li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: #00aaff;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 1rem 0;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
+.hero {
+    background: url('path-to-another-bg-image.jpg') no-repeat center center fixed; 
+    background-size: cover;
+}
+
+/* Add any other custom styles or overrides here */
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+    height: 320px;
+    border: 1px solid #f1f1f1;
+    margin-bottom: 20px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+    z-index: 2;
+}
+
+.flip-card-back {
+    background-color: #ddd;
+    color: black;
+    transform: rotateY(180deg);
+    z-index: 1;
+}
+
+/* Style for images and headers on the card */
+.flip-card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+.flip-card h3 {
+    margin-top: 10px;
+}
